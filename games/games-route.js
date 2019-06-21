@@ -6,9 +6,9 @@ router.get("/", (req, res) => {
     .find()
     .then(games => {
       res.status(200).json(games);
-      console.log(games);
+      // console.log(games);
     })
-    .catch(err => console.log(err));
+    .catch(err => res.json(err));
 });
 
 router.delete("/:id", (req, res) => {
